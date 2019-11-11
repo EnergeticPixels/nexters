@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss styles/style.css -w",
+    "watch:sass": "node-sass sass/main.scss styles/style.css -w --recursive --use-polling --polling-interval 1000",
     "devserver": "live-server --port=8081 --browser=CHROME --verbose",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss styles/style.comp.css",
